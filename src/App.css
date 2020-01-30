@@ -1,0 +1,169 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html{
+  font-size:16px;
+}
+
+body{
+  font-family:"Open Sans";
+  font-size:100%;
+
+}
+
+.App{
+  display:grid;
+  width:100vw;
+  height:100vh;
+}
+
+.calculator{
+  align-self:center;
+  justify-self:center;
+  width:600px;
+  height:800px;
+  background:#CCC;
+  border:10px solid #777;
+  box-shadow:0 0 4px #000;
+  display:grid;
+  grid-template-columns:3fr 1fr;
+  grid-template-rows:1fr 7fr;
+  align-items:stretch;
+  justify-items:stretch;
+  grid-gap:10px;
+  padding:10px;
+}
+
+.calculator input[type="button"]{
+  font-size:2em;
+  border:none;
+  background:#555;
+  border:5px solid #444;
+  text-shadow:0 0 2px #000;
+  color:#FFF;
+}
+
+.calculator input[type="button"]:hover{
+  background:#666;
+}
+
+.calculator input[type="button"]:active{
+  background:#333;
+  box-shadow:0 0 6px #000 inset;
+}
+
+.calculator input[type="button"]:focus, .calculator input[type="text"]:focus{
+  outline:none;
+}
+
+.calculator-display{
+  background:#777;
+  grid-column:span 2;
+  display:grid;
+  align-items: stretch;
+  justify-items: stretch;
+  padding:10px;
+}
+
+.calculator-display input[type="text"]{
+  background:#222;
+  border:none;
+  font-size:2.5em;
+  text-align:right;
+  color:#CCC;
+  box-sizing: border-box;
+  padding:0 10px;
+}
+
+.calculator-numbers input.clear{
+  grid-column:span 2;
+  background:#550000;
+  border-color:#440000;
+}
+
+.calculator-numbers input.clear:hover{
+  background:#990000;
+}
+
+.calculator-numbers input.clear:active{
+  background:#330000;
+}
+
+.calculator-numbers{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap:10px;
+  grid-auto-rows:auto;
+  background:#777;
+  padding:10px;
+}
+
+.calculator-math{
+  display:grid;
+  grid-gap:10px;
+  grid-auto-rows:auto;
+  background:#777;
+  padding:10px;
+}
+
+.about-button{
+  width:60px;
+  height:60px;
+  background:#550000;
+  border:5px solid #440000;
+  display:grid;
+  color:#FFF;
+  position: absolute;
+  right:10px;
+  top:10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.about-button.open::after{
+  position: absolute;
+  z-index:2;
+  border-bottom:5px solid #550000;
+  width:60px;
+  content:"";
+  display:block;
+  top:100%;
+  right:0;
+}
+
+.about-button .icon{
+  align-self:stretch;
+  justify-self: stretch;
+  display: grid;
+}
+
+.about-button i{
+  justify-self:center;
+  align-self:center;
+}
+
+.about{
+  padding:20px;
+  background:#550000;
+  border:5px solid #440000;
+  color:#FFF;
+  position:absolute;
+  right:-5px;
+  top:100%;
+  width:300px;
+  z-index:1;
+  box-sizing: border-box;
+}
+
+.about h2{
+  margin-bottom:10px;
+  font-weight: 600;
+}
+
+.about p{
+  margin-bottom:10px;
+}
+
+.about p:last-of-type{
+  margin-bottom:0;
+}
